@@ -1,5 +1,6 @@
 # Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning
 **Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning**
+
 Qinan Yu, Alexa Tartaglini, Peter Hase, Carlos Guestrin, Christopher Potts
 
 ## Overview
