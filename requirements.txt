@@ -1,0 +1,37 @@
+# Core dependencies
+torch>=2.1.0
+transformers>=4.37.0
+vllm>=0.3.0
+accelerate>=0.25.0
+
+<<<<<<< HEAD
+# RLHF/GRPO specific
+trl>=0.7.0
+peft>=0.7.0
+=======
+# Model specific
+google-gemma>=0.1.0
+>>>>>>> 17134508a7d01d6cfc43923af475415ad19c9cae
+
+# Utilities
+tqdm>=4.66.0
+pyyaml>=6.0.1
+numpy>=1.24.0
+pandas>=2.0.0
+
+<<<<<<< HEAD
+# Logging and monitoring
+wandb>=0.15.0
+
+# Additional dependencies for training
+datasets>=2.14.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Optional performance optimizations (may cause GLIBC issues on older systems)
+=======
+# Optional but recommended for better performance
+>>>>>>> 17134508a7d01d6cfc43923af475415ad19c9cae
+flash-attn>=2.3.0
+xformers>=0.0.22 
