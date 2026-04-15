@@ -1,0 +1,81 @@
+# Teacher-Student Few-Shot Evaluation Configuration for N Queens
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  # Evaluation metrics to compute
+  metrics:
+    - "student_accuracy"
+    #- "entropy"  # Student accuracy using teacher explanations        # Teacher generation entropy
+  
+  # Use base model directly instead of checkpoint
+  #checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/direct/n_queens"  # Point to HuggingFace model
+  checkpoint_dir: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"
+  base_model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"
+  
+  # Dataset configuration
+  teacher_dataset:
+    task_name: "n_queens"
+    seed: 43
+    size: 1000
+    val_start: 0
+    n: 8
+    min_remove: 1
+    max_remove: 7
+
+  
+  student_dataset:
+    task_name: "n_queens"
+    seed: 44  # Different seed for student evaluation
+    size: 1000
+    n: 8
+    min_remove: 1
+    max_remove: 7
+  
+  # Few-shot configuration
+  few_shot:
+    enabled: True
+    n_shot: 3
+    seed: 144  # Seed for few-shot examples
+  
+  # Model configuration
+  teacher_model:
+    # Will be loaded from checkpoint
+    temperature: 1.0
+    k: 1
+    save_token_logprobs: false
+    top_p: 1
+    top_k: -1
+    max_tokens: 1024
+    use_chat_template: True  # Enable chat template for teacher model
+    developer_prompt: "direct"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    preappend_token: "<answer>"
+    
+  student_model:
+    model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"  # Base model as student
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: True  # Enable chat template for student model
+    developer_prompt: "empty"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+  
+  # vLLM configuration - minimal config to avoid hanging
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: True
+    disable_log_stats: True
+    dtype: "bfloat16"
+    
+  # Evaluation settings
+  batch_size: 100
+  max_checkpoints: 20  # Only one checkpoint specified
+  start_step: -1  # Start from which step: -1 = all checkpoints, 100 = start from step 100
+  
+  # Output configuration
+  output_dir: "evaluate/results/direct/n_queens_default"
+  save_intermediate_results: True
+  plot_results: True

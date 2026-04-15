@@ -1,0 +1,87 @@
+# Teacher-Student Few-Shot Evaluation Configuration for Mini Sudoku
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  # Evaluation metrics to compute
+  metrics:
+    - "perplexity"
+    - "teacher_accuracy"
+    - "shuffle"
+    - "answer_removed_explanation_only"
+    - "expert_thinking"  
+    - "truncate_random"
+    - "filler"     # Teacher generation entropy
+  
+  # Use base model directly instead of checkpoint
+  checkpoint_dir: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"  # Point to HuggingFace model
+  #checkpoint_dir: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"
+  base_model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"
+  
+  # Dataset configuration
+  teacher_dataset:
+    task_name: "spiral_matrix"
+    seed: 42
+    size: 1000
+    val_start: 0  # Starting index for validation data
+    #min_n: 2
+    #max_n: 10
+
+  student_dataset:
+    task_name: "spiral_matrix"
+    val_start: 0
+    seed: 42  # Different seed for student evaluation
+    size: 2  # Smaller size for API testing
+    min_n: 2
+    max_n: 4
+  
+  # Few-shot configuration
+  few_shot:
+    enabled: True
+    n_shot: 3
+    seed: 144  # Seed for few-shot examples
+  
+  # Model configuration
+  teacher_model:
+    # Will be loaded from checkpoint
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 1024
+    use_chat_template: True  # Enable chat template for teacher model
+    developer_prompt: "DeepSeekZero"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    preappend_token: "<think>"
+    save_token_logprobs: False
+    
+  student_model:
+    model_path: "gpt-4o-2024-11-20"  # Base model as student
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: True  # Enable chat template for student model
+    developer_prompt: "empty"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+  
+  # vLLM configuration - minimal config to avoid hanging
+  vllm:
+    tensor_parallel_size: 2
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: True
+    disable_log_stats: True
+    dtype: "bfloat16"
+    
+  # Evaluation settings
+  batch_size: 256
+  max_checkpoints: 20  # Only one checkpoint specified
+  start_step: -1  # Start from which step: -1 = all checkpoints, 100 = start from step 100
+  
+  # Output configuration
+  output_dir: "evaluate/results/grpo/spiral_matrix_expert"
+  save_intermediate_results: True
+  plot_results: True
+  expert_thinking_dir:
+    o3-mini: /nlp/scr/qinanyu/rl-explanations/evaluate/results/o3-mini_gpt-4.1-mini/${evaluation.teacher_dataset.task_name}/teacher/step_0/teacher_responses_step_0.json
+    gpt-oss: /nlp/scr/qinanyu/rl-explanations/evaluate/results/gpt-oss-20b_gpt-4.1-mini/${evaluation.teacher_dataset.task_name}/teacher/step_0/teacher_responses_step_0.json
+    qwen3-30b-a3b-thinking-2507: /nlp/scr/qinanyu/rl-explanations/evaluate/results/qwen3-30b-a3b-thinking-2507_gpt-4.1-mini/${evaluation.teacher_dataset.task_name}/teacher/step_0/teacher_responses_step_0.json

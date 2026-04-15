@@ -1,0 +1,1015 @@
+################################################################################
+# LLAMA-3.2-3B EVALUATION COMMANDS - COMPLETE TASK SET
+# Generated automatically for 101 tasks
+################################################################################
+
+# ABBASE_CONVERSION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-abbase_conversion-llama-direct.out --job-name eval-abbase_conversion-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name abbase_conversion_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/abbase_conversion"
+
+# ABBASE_CONVERSION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-abbase_conversion-llama-grpo.out --job-name eval-abbase_conversion-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name abbase_conversion_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/abbase_conversion \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/abbase_conversion"
+
+# ACRE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-acre-llama-direct.out --job-name eval-acre-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name acre_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/acre"
+
+# ACRE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-acre-llama-grpo.out --job-name eval-acre-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name acre_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/acre \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/acre"
+
+# ADVANCED_GEOMETRY - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-advanced_geometry-llama-direct.out --job-name eval-advanced_geometry-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name advanced_geometry_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/advanced_geometry"
+
+# ADVANCED_GEOMETRY - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-advanced_geometry-llama-grpo.out --job-name eval-advanced_geometry-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name advanced_geometry_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/advanced_geometry \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/advanced_geometry"
+
+# AIW - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-aiw-llama-direct.out --job-name eval-aiw-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name aiw_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/aiw"
+
+# AIW - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-aiw-llama-grpo.out --job-name eval-aiw-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name aiw_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/aiw \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/aiw"
+
+# ARC_1D - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-arc_1d-llama-direct.out --job-name eval-arc_1d-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name arc_1d_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/arc_1d"
+
+# ARC_1D - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-arc_1d-llama-grpo.out --job-name eval-arc_1d-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name arc_1d_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/arc_1d \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/arc_1d"
+
+# ARC_AGI - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-arc_agi-llama-direct.out --job-name eval-arc_agi-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name arc_agi_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/arc_agi"
+
+# ARC_AGI - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-arc_agi-llama-grpo.out --job-name eval-arc_agi-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name arc_agi_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/arc_agi \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/arc_agi"
+
+# BASE_CONVERSION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-base_conversion-llama-direct.out --job-name eval-base_conversion-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name base_conversion_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/base_conversion"
+
+# BASE_CONVERSION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-base_conversion-llama-grpo.out --job-name eval-base_conversion-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name base_conversion_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/base_conversion \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/base_conversion"
+
+# BASIC_ARITHMETIC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-basic_arithmetic-llama-direct.out --job-name eval-basic_arithmetic-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name basic_arithmetic_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/basic_arithmetic"
+
+# BASIC_ARITHMETIC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-basic_arithmetic-llama-grpo.out --job-name eval-basic_arithmetic-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name basic_arithmetic_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/basic_arithmetic \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/basic_arithmetic"
+
+# BF - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-bf-llama-direct.out --job-name eval-bf-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name bf_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/bf"
+
+# BF - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-bf-llama-grpo.out --job-name eval-bf-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name bf_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/bf \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/bf"
+
+# BINARY_ALTERNATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-binary_alternation-llama-direct.out --job-name eval-binary_alternation-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name binary_alternation_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/binary_alternation"
+
+# BINARY_ALTERNATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-binary_alternation-llama-grpo.out --job-name eval-binary_alternation-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name binary_alternation_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/binary_alternation \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/binary_alternation"
+
+# BINARY_MATRIX - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-binary_matrix-llama-direct.out --job-name eval-binary_matrix-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name binary_matrix_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/binary_matrix"
+
+# BINARY_MATRIX - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-binary_matrix-llama-grpo.out --job-name eval-binary_matrix-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name binary_matrix_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/binary_matrix \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/binary_matrix"
+
+# BITWISE_ARITHMETIC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-bitwise_arithmetic-llama-direct.out --job-name eval-bitwise_arithmetic-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name bitwise_arithmetic_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/bitwise_arithmetic"
+
+# BITWISE_ARITHMETIC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-bitwise_arithmetic-llama-grpo.out --job-name eval-bitwise_arithmetic-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name bitwise_arithmetic_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/bitwise_arithmetic \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/bitwise_arithmetic"
+
+# CAESAR_CIPHER - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-caesar_cipher-llama-direct.out --job-name eval-caesar_cipher-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name caesar_cipher_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/caesar_cipher"
+
+# CAESAR_CIPHER - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-caesar_cipher-llama-grpo.out --job-name eval-caesar_cipher-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name caesar_cipher_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/caesar_cipher \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/caesar_cipher"
+
+# CALENDAR_ARITHMETIC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-calendar_arithmetic-llama-direct.out --job-name eval-calendar_arithmetic-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name calendar_arithmetic_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/calendar_arithmetic"
+
+# CALENDAR_ARITHMETIC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-calendar_arithmetic-llama-grpo.out --job-name eval-calendar_arithmetic-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name calendar_arithmetic_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/calendar_arithmetic \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/calendar_arithmetic"
+
+# CHAIN_SUM - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-chain_sum-llama-direct.out --job-name eval-chain_sum-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name chain_sum_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/chain_sum"
+
+# CHAIN_SUM - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-chain_sum-llama-grpo.out --job-name eval-chain_sum-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name chain_sum_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/chain_sum"
+
+# CIRCUIT_LOGIC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-circuit_logic-llama-direct.out --job-name eval-circuit_logic-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name circuit_logic_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/circuit_logic"
+
+# CIRCUIT_LOGIC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-circuit_logic-llama-grpo.out --job-name eval-circuit_logic-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name circuit_logic_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/circuit_logic"
+
+# CODEIO - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-codeio-llama-direct.out --job-name eval-codeio-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name codeio_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/codeio"
+
+# CODEIO - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-codeio-llama-grpo.out --job-name eval-codeio-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name codeio_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/codeio"
+
+# COLOR_CUBE_ROTATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-color_cube_rotation-llama-direct.out --job-name eval-color_cube_rotation-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name color_cube_rotation_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/color_cube_rotation"
+
+# COLOR_CUBE_ROTATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-color_cube_rotation-llama-grpo.out --job-name eval-color_cube_rotation-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name color_cube_rotation_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/color_cube_rotation"
+
+# COMPLEX_ARITHMETIC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-complex_arithmetic-llama-direct.out --job-name eval-complex_arithmetic-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name complex_arithmetic_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/complex_arithmetic"
+
+# COMPLEX_ARITHMETIC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-complex_arithmetic-llama-grpo.out --job-name eval-complex_arithmetic-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name complex_arithmetic_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/complex_arithmetic"
+
+# COUNT_BITS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-count_bits-llama-direct.out --job-name eval-count_bits-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name count_bits_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/count_bits"
+
+# COUNT_BITS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-count_bits-llama-grpo.out --job-name eval-count_bits-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name count_bits_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/count_bits"
+
+# COUNT_PRIMES - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-count_primes-llama-direct.out --job-name eval-count_primes-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name count_primes_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/count_primes"
+
+# COUNT_PRIMES - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-count_primes-llama-grpo.out --job-name eval-count_primes-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name count_primes_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/count_primes"
+
+# COUNTDOWN - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-countdown-llama-direct.out --job-name eval-countdown-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name countdown_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/countdown"
+
+# COUNTDOWN - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-countdown-llama-grpo.out --job-name eval-countdown-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name countdown_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/countdown"
+
+# COURSE_SCHEDULE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-course_schedule-llama-direct.out --job-name eval-course_schedule-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name course_schedule_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/course_schedule"
+
+# COURSE_SCHEDULE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-course_schedule-llama-grpo.out --job-name eval-course_schedule-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name course_schedule_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/course_schedule"
+
+# CRYPTARITHM - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-cryptarithm-llama-direct.out --job-name eval-cryptarithm-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name cryptarithm_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/cryptarithm"
+
+# CRYPTARITHM - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-cryptarithm-llama-grpo.out --job-name eval-cryptarithm-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name cryptarithm_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/cryptarithm"
+
+# DECIMAL_ARITHMETIC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-decimal_arithmetic-llama-direct.out --job-name eval-decimal_arithmetic-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name decimal_arithmetic_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/decimal_arithmetic"
+
+# DECIMAL_ARITHMETIC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-decimal_arithmetic-llama-grpo.out --job-name eval-decimal_arithmetic-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name decimal_arithmetic_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/decimal_arithmetic"
+
+# DECIMAL_CHAIN_SUM - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-decimal_chain_sum-llama-direct.out --job-name eval-decimal_chain_sum-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name decimal_chain_sum_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/decimal_chain_sum"
+
+# DECIMAL_CHAIN_SUM - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-decimal_chain_sum-llama-grpo.out --job-name eval-decimal_chain_sum-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name decimal_chain_sum_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/decimal_chain_sum"
+
+# DICE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-dice-llama-direct.out --job-name eval-dice-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name dice_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/dice"
+
+# DICE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-dice-llama-grpo.out --job-name eval-dice-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name dice_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/dice"
+
+# EMOJI_MYSTERY - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-emoji_mystery-llama-direct.out --job-name eval-emoji_mystery-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name emoji_mystery_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/emoji_mystery"
+
+# EMOJI_MYSTERY - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-emoji_mystery-llama-grpo.out --job-name eval-emoji_mystery-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name emoji_mystery_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/emoji_mystery"
+
+# FAMILY_RELATIONSHIPS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-family_relationships-llama-direct.out --job-name eval-family_relationships-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name family_relationships_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/family_relationships"
+
+# FAMILY_RELATIONSHIPS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-family_relationships-llama-grpo.out --job-name eval-family_relationships-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name family_relationships_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/family_relationships \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/family_relationships"
+
+# FIGLET_FONT - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-figlet_font-llama-direct.out --job-name eval-figlet_font-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name figlet_font_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/figlet_font"
+
+# FIGLET_FONT - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-figlet_font-llama-grpo.out --job-name eval-figlet_font-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name figlet_font_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/figlet_font"
+
+# FRACTION_SIMPLIFICATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-fraction_simplification-llama-direct.out --job-name eval-fraction_simplification-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name fraction_simplification_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/fraction_simplification"
+
+# FRACTION_SIMPLIFICATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-fraction_simplification-llama-grpo.out --job-name eval-fraction_simplification-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name fraction_simplification_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/fraction_simplification"
+
+# FUTOSHIKI - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-futoshiki-llama-direct.out --job-name eval-futoshiki-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name futoshiki_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/futoshiki"
+
+# FUTOSHIKI - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8,9] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-futoshiki-llama-cot.out --job-name eval-futoshiki-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name futoshiki_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/futoshiki \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/futoshiki"
+
+# GAME_OF_LIFE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-game_of_life-llama-direct.out --job-name eval-game_of_life-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name game_of_life_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/game_of_life"
+
+# GAME_OF_LIFE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-game_of_life-llama-grpo.out --job-name eval-game_of_life-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name game_of_life_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/game_of_life"
+
+# GAME_OF_LIFE_HALTING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-game_of_life_halting-llama-direct.out --job-name eval-game_of_life_halting-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name game_of_life_halting_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/game_of_life_halting"
+
+# GAME_OF_LIFE_HALTING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-game_of_life_halting-llama-grpo.out --job-name eval-game_of_life_halting-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name game_of_life_halting_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/game_of_life_halting"
+
+# GCD - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-gcd-llama-direct.out --job-name eval-gcd-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name gcd_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/gcd"
+
+# GCD - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-gcd-llama-grpo.out --job-name eval-gcd-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name gcd_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/gcd"
+
+# GRAPH_COLOR - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-graph_color-llama-direct.out --job-name eval-graph_color-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name graph_color_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/graph_color"
+
+# GRAPH_COLOR - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-graph_color-llama-grpo.out --job-name eval-graph_color-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name graph_color_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/graph_color"
+
+# GROUP_ANAGRAMS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-group_anagrams-llama-direct.out --job-name eval-group_anagrams-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name group_anagrams_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/group_anagrams"
+
+# GROUP_ANAGRAMS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-group_anagrams-llama-grpo.out --job-name eval-group_anagrams-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name group_anagrams_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/group_anagrams"
+
+# GSM_SYMBOLIC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-gsm_symbolic-llama-direct.out --job-name eval-gsm_symbolic-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name gsm_symbolic_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/gsm_symbolic"
+
+# GSM_SYMBOLIC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-gsm_symbolic-llama-grpo.out --job-name eval-gsm_symbolic-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name gsm_symbolic_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/gsm_symbolic"
+
+# INTERMEDIATE_INTEGRATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-intermediate_integration-llama-direct.out --job-name eval-intermediate_integration-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name intermediate_integration_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/intermediate_integration"
+
+# INTERMEDIATE_INTEGRATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-intermediate_integration-llama-grpo.out --job-name eval-intermediate_integration-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name intermediate_integration_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/intermediate_integration"
+
+# ISOMORPHIC_STRINGS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-isomorphic_strings-llama-direct.out --job-name eval-isomorphic_strings-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name isomorphic_strings_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/isomorphic_strings"
+
+# ISOMORPHIC_STRINGS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-isomorphic_strings-llama-grpo.out --job-name eval-isomorphic_strings-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name isomorphic_strings_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/isomorphic_strings"
+
+# JUGS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-jugs-llama-direct.out --job-name eval-jugs-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name jugs_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/jugs"
+
+# JUGS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-jugs-llama-grpo.out --job-name eval-jugs-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name jugs_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/jugs"
+
+# KNIGHT_KNAVES - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-knight_knaves-llama-direct.out --job-name eval-knight_knaves-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name knight_knaves_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/knight_knaves"
+
+# KNIGHT_KNAVES - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-knight_knaves-llama-grpo.out --job-name eval-knight_knaves-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name knight_knaves_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/knight_knaves"
+
+# KNIGHT_SWAP - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-knight_swap-llama-direct.out --job-name eval-knight_swap-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name knight_swap_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/knight_swap"
+
+# KNIGHT_SWAP - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-knight_swap-llama-grpo.out --job-name eval-knight_swap-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name knight_swap_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/knight_swap"
+
+# KNIGHTS_KNAVES - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-knights_knaves-llama-direct.out --job-name eval-knights_knaves-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name knights_knaves_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/knights_knaves"
+
+# KNIGHTS_KNAVES - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-knights_knaves-llama-grpo.out --job-name eval-knights_knaves-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name knights_knaves_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/knights_knaves"
+
+# LARGEST_ISLAND - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-largest_island-llama-direct.out --job-name eval-largest_island-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name largest_island_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/largest_island"
+
+# LARGEST_ISLAND - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-largest_island-llama-grpo.out --job-name eval-largest_island-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name largest_island_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/largest_island"
+
+# LCM - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-lcm-llama-direct.out --job-name eval-lcm-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name lcm_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/lcm"
+
+# LCM - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-lcm-llama-grpo.out --job-name eval-lcm-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name lcm_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/lcm"
+
+# LEG_COUNTING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-leg_counting-llama-direct.out --job-name eval-leg_counting-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name leg_counting_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/leg_counting"
+
+# LEG_COUNTING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-leg_counting-llama-grpo.out --job-name eval-leg_counting-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name leg_counting_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/leg_counting"
+
+# LETTER_COUNTING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-letter_counting-llama-direct.out --job-name eval-letter_counting-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name letter_counting_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/letter_counting"
+
+# LETTER_COUNTING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-letter_counting-llama-grpo.out --job-name eval-letter_counting-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name letter_counting_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/letter_counting"
+
+# LETTER_JUMBLE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-letter_jumble-llama-direct.out --job-name eval-letter_jumble-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name letter_jumble_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/letter_jumble"
+
+# LETTER_JUMBLE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-letter_jumble-llama-grpo.out --job-name eval-letter_jumble-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name letter_jumble_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/letter_jumble"
+
+# LIST_FUNCTIONS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-list_functions-llama-direct.out --job-name eval-list_functions-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name list_functions_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/list_functions"
+
+# LIST_FUNCTIONS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-list_functions-llama-grpo.out --job-name eval-list_functions-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name list_functions_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/list_functions"
+
+# MAHJONG_PUZZLE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-mahjong_puzzle-llama-direct.out --job-name eval-mahjong_puzzle-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name mahjong_puzzle_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/mahjong_puzzle"
+
+# MAHJONG_PUZZLE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-mahjong_puzzle-llama-grpo.out --job-name eval-mahjong_puzzle-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name mahjong_puzzle_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/mahjong_puzzle"
+
+# MANIPULATE_MATRIX - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-manipulate_matrix-llama-direct.out --job-name eval-manipulate_matrix-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name manipulate_matrix_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/manipulate_matrix"
+
+# MANIPULATE_MATRIX - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-manipulate_matrix-llama-grpo.out --job-name eval-manipulate_matrix-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name manipulate_matrix_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/manipulate_matrix"
+
+# MAZE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-maze-llama-direct.out --job-name eval-maze-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name maze_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/maze"
+
+# MAZE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-maze-llama-grpo.out --job-name eval-maze-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name maze_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/maze"
+
+# MINI_SUDOKU - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-mini_sudoku-llama-direct.out --job-name eval-mini_sudoku-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name mini_sudoku_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/mini_sudoku"
+
+# MINI_SUDOKU - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-mini_sudoku-llama-grpo.out --job-name eval-mini_sudoku-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name mini_sudoku_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/mini_sudoku \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/mini_sudoku"
+
+# MODULO_GRID - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-modulo_grid-llama-direct.out --job-name eval-modulo_grid-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name modulo_grid_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/modulo_grid"
+
+# MODULO_GRID - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-modulo_grid-llama-grpo.out --job-name eval-modulo_grid-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name modulo_grid_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/modulo_grid"
+
+# N_QUEENS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-n_queens-llama-direct.out --job-name eval-n_queens-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name n_queens_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/n_queens"
+
+# N_QUEENS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-n_queens-llama-grpo.out --job-name eval-n_queens-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name n_queens_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/n_queens"
+
+# NEEDLE_HAYSTACK - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-needle_haystack-llama-direct.out --job-name eval-needle_haystack-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name needle_haystack_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/needle_haystack"
+
+# NEEDLE_HAYSTACK - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-needle_haystack-llama-grpo.out --job-name eval-needle_haystack-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name needle_haystack_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/needle_haystack"
+
+# NUMBER_FILTERING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-number_filtering-llama-direct.out --job-name eval-number_filtering-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name number_filtering_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/number_filtering"
+
+# NUMBER_FILTERING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-number_filtering-llama-grpo.out --job-name eval-number_filtering-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name number_filtering_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/number_filtering"
+
+# NUMBER_FORMAT - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-number_format-llama-direct.out --job-name eval-number_format-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name number_format_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/number_format"
+
+# NUMBER_FORMAT - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-number_format-llama-grpo.out --job-name eval-number_format-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name number_format_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/number_format"
+
+# NUMBER_SEQUENCE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-number_sequence-llama-direct.out --job-name eval-number_sequence-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name number_sequence_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/number_sequence"
+
+# NUMBER_SEQUENCE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-number_sequence-llama-grpo.out --job-name eval-number_sequence-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name number_sequence_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/number_sequence"
+
+# NUMBER_SORTING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-number_sorting-llama-direct.out --job-name eval-number_sorting-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name number_sorting_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/number_sorting"
+
+# NUMBER_SORTING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-number_sorting-llama-grpo.out --job-name eval-number_sorting-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name number_sorting_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/number_sorting"
+
+# PALINDROME_GENERATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-palindrome_generation-llama-direct.out --job-name eval-palindrome_generation-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name palindrome_generation_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/palindrome_generation"
+
+# PALINDROME_GENERATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-palindrome_generation-llama-grpo.out --job-name eval-palindrome_generation-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name palindrome_generation_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/palindrome_generation"
+
+# PALINDROME_PARTITIONING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-palindrome_partitioning-llama-direct.out --job-name eval-palindrome_partitioning-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name palindrome_partitioning_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/palindrome_partitioning"
+
+# PALINDROME_PARTITIONING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-palindrome_partitioning-llama-grpo.out --job-name eval-palindrome_partitioning-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name palindrome_partitioning_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/palindrome_partitioning"
+
+# POLYNOMIAL_EQUATIONS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-polynomial_equations-llama-direct.out --job-name eval-polynomial_equations-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name polynomial_equations_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/polynomial_equations"
+
+# POLYNOMIAL_EQUATIONS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-polynomial_equations-llama-grpo.out --job-name eval-polynomial_equations-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name polynomial_equations_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/polynomial_equations"
+
+# POLYNOMIAL_MULTIPLICATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-polynomial_multiplication-llama-direct.out --job-name eval-polynomial_multiplication-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name polynomial_multiplication_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/polynomial_multiplication"
+
+# POLYNOMIAL_MULTIPLICATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-polynomial_multiplication-llama-grpo.out --job-name eval-polynomial_multiplication-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name polynomial_multiplication_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/polynomial_multiplication"
+
+# POOL_MATRIX - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-pool_matrix-llama-direct.out --job-name eval-pool_matrix-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name pool_matrix_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/pool_matrix"
+
+# POOL_MATRIX - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-pool_matrix-llama-grpo.out --job-name eval-pool_matrix-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name pool_matrix_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/pool_matrix"
+
+# POWER_FUNCTION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-power_function-llama-direct.out --job-name eval-power_function-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name power_function_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/power_function"
+
+# POWER_FUNCTION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-power_function-llama-grpo.out --job-name eval-power_function-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name power_function_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/power_function"
+
+# PRIME_FACTORIZATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-prime_factorization-llama-direct.out --job-name eval-prime_factorization-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name prime_factorization_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/prime_factorization"
+
+# PRIME_FACTORIZATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-prime_factorization-llama-grpo.out --job-name eval-prime_factorization-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name prime_factorization_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/prime_factorization"
+
+# PRODUCTS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-products-llama-direct.out --job-name eval-products-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name products_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/products"
+
+# PRODUCTS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-products-llama-grpo.out --job-name eval-products-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name products_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/products"
+
+# PROPOSITIONAL_LOGIC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-propositional_logic-llama-direct.out --job-name eval-propositional_logic-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name propositional_logic_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/propositional_logic"
+
+# PROPOSITIONAL_LOGIC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-propositional_logic-llama-grpo.out --job-name eval-propositional_logic-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name propositional_logic_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/propositional_logic"
+
+# PUZZLE24 - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-puzzle24-llama-direct.out --job-name eval-puzzle24-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name puzzle24_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/puzzle24"
+
+# PUZZLE24 - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-puzzle24-llama-grpo.out --job-name eval-puzzle24-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name puzzle24_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/puzzle24"
+
+# QUANTUM_LOCK - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-quantum_lock-llama-direct.out --job-name eval-quantum_lock-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name quantum_lock_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/quantum_lock"
+
+# QUANTUM_LOCK - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-quantum_lock-llama-grpo.out --job-name eval-quantum_lock-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name quantum_lock_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/quantum_lock"
+
+# RANSOM_NOTE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-ransom_note-llama-direct.out --job-name eval-ransom_note-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name ransom_note_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/ransom_note"
+
+# RANSOM_NOTE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-ransom_note-llama-grpo.out --job-name eval-ransom_note-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name ransom_note_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/ransom_note"
+
+# REARC - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rearc-llama-direct.out --job-name eval-rearc-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name rearc_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/rearc"
+
+# REARC - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rearc-llama-grpo.out --job-name eval-rearc-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name rearc_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/rearc"
+
+# RECTANGLE_COUNT - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rectangle_count-llama-direct.out --job-name eval-rectangle_count-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name rectangle_count_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/rectangle_count"
+
+# RECTANGLE_COUNT - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rectangle_count-llama-grpo.out --job-name eval-rectangle_count-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name rectangle_count_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/rectangle_count"
+
+# ROTATE_MATRIX - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rotate_matrix-llama-direct.out --job-name eval-rotate_matrix-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name rotate_matrix_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/rotate_matrix"
+
+# ROTATE_MATRIX - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rotate_matrix-llama-grpo.out --job-name eval-rotate_matrix-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name rotate_matrix_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/rotate_matrix"
+
+# ROTTEN_ORANGES - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rotten_oranges-llama-direct.out --job-name eval-rotten_oranges-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name rotten_oranges_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/rotten_oranges"
+
+# ROTTEN_ORANGES - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rotten_oranges-llama-grpo.out --job-name eval-rotten_oranges-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name rotten_oranges_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/rotten_oranges"
+
+# RUBIKS_CUBE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rubiks_cube-llama-direct.out --job-name eval-rubiks_cube-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name rubiks_cube_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/rubiks_cube"
+
+# RUBIKS_CUBE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rubiks_cube-llama-grpo.out --job-name eval-rubiks_cube-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name rubiks_cube_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/rubiks_cube"
+
+# RUSH_HOUR - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rush_hour-llama-direct.out --job-name eval-rush_hour-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name rush_hour_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/rush_hour"
+
+# RUSH_HOUR - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rush_hour-llama-grpo.out --job-name eval-rush_hour-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name rush_hour_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/rush_hour"
+
+# SELF_REFERENCE - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-self_reference-llama-direct.out --job-name eval-self_reference-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name self_reference_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/self_reference"
+
+# SELF_REFERENCE - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-self_reference-llama-grpo.out --job-name eval-self_reference-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name self_reference_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/self_reference"
+
+# SENTENCE_REORDERING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-sentence_reordering-llama-direct.out --job-name eval-sentence_reordering-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name sentence_reordering_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/sentence_reordering"
+
+# SENTENCE_REORDERING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-sentence_reordering-llama-grpo.out --job-name eval-sentence_reordering-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name sentence_reordering_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/sentence_reordering"
+
+# SHORTEST_PATH - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-shortest_path-llama-direct.out --job-name eval-shortest_path-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name shortest_path_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/shortest_path"
+
+# SHORTEST_PATH - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-shortest_path-llama-grpo.out --job-name eval-shortest_path-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name shortest_path_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/shortest_path"
+
+# SIMPLE_EQUATIONS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-simple_equations-llama-direct.out --job-name eval-simple_equations-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name simple_equations_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/simple_equations"
+
+# SIMPLE_EQUATIONS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-simple_equations-llama-grpo.out --job-name eval-simple_equations-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name simple_equations_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/simple_equations \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/simple_equations "
+
+# SIMPLE_GEOMETRY - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-simple_geometry-llama-direct.out --job-name eval-simple_geometry-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name simple_geometry_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/simple_geometry"
+
+# SIMPLE_GEOMETRY - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-simple_geometry-llama-grpo.out --job-name eval-simple_geometry-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name simple_geometry_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/simple_geometry"
+
+# SIMPLE_INTEGRATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-simple_integration-llama-direct.out --job-name eval-simple_integration-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name simple_integration_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/simple_integration"
+
+# SIMPLE_INTEGRATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-simple_integration-llama-grpo.out --job-name eval-simple_integration-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name simple_integration_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/simple_integration"
+
+# SOKOBAN - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-sokoban-llama-direct.out --job-name eval-sokoban-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name sokoban_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/sokoban"
+
+# SOKOBAN - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-sokoban-llama-grpo.out --job-name eval-sokoban-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name sokoban_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/sokoban"
+
+# SPELL_BACKWARD - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-spell_backward-llama-direct.out --job-name eval-spell_backward-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name spell_backward_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/spell_backward"
+
+# SPELL_BACKWARD - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-spell_backward-llama-grpo.out --job-name eval-spell_backward-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name spell_backward_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/spell_backward"
+
+# SPIRAL_MATRIX - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-spiral_matrix-llama-direct.out --job-name eval-spiral_matrix-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name spiral_matrix_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/spiral_matrix"
+
+# SPIRAL_MATRIX - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-spiral_matrix-llama-cot.out --job-name eval-spiral_matrix-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name spiral_matrix_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/spiral_matrix"
+
+# STRING_INSERTION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-string_insertion-llama-direct.out --job-name eval-string_insertion-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name string_insertion_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/string_insertion"
+
+# STRING_INSERTION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-string_insertion-llama-grpo.out --job-name eval-string_insertion-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name string_insertion_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/string_insertion"
+
+# STRING_MANIPULATION - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-string_manipulation-llama-direct.out --job-name eval-string_manipulation-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name string_manipulation_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/string_manipulation"
+
+# STRING_MANIPULATION - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-string_manipulation-llama-grpo.out --job-name eval-string_manipulation-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name string_manipulation_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/string_manipulation"
+
+# STRING_SPLITTING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-string_splitting-llama-direct.out --job-name eval-string_splitting-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name string_splitting_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/string_splitting"
+
+# STRING_SPLITTING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-string_splitting-llama-grpo.out --job-name eval-string_splitting-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name string_splitting_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/string_splitting"
+
+# STRING_SYNTHESIS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-string_synthesis-llama-direct.out --job-name eval-string_synthesis-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name string_synthesis_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/string_synthesis"
+
+# STRING_SYNTHESIS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-string_synthesis-llama-grpo.out --job-name eval-string_synthesis-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name string_synthesis_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/string_synthesis"
+
+# SUDOKU - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-sudoku-llama-direct.out --job-name eval-sudoku-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name sudoku_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/sudoku"
+
+# SUDOKU - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-sudoku-llama-grpo.out --job-name eval-sudoku-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name sudoku_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/sudoku"
+
+# SYLLOGISM - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-syllogism-llama-direct.out --job-name eval-syllogism-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name syllogism_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/syllogism"
+
+# SYLLOGISM - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-syllogism-llama-grpo.out --job-name eval-syllogism-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name syllogism_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/syllogism"
+
+# TIME_INTERVALS - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-time_intervals-llama-direct.out --job-name eval-time_intervals-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name time_intervals_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/time_intervals"
+
+# TIME_INTERVALS - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-time_intervals-llama-grpo.out --job-name eval-time_intervals-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name time_intervals_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/time_intervals"
+
+# TOWER_OF_HANOI - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-tower_of_hanoi-llama-direct.out --job-name eval-tower_of_hanoi-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name tower_of_hanoi_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/tower_of_hanoi"
+
+# TOWER_OF_HANOI - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-tower_of_hanoi-llama-grpo.out --job-name eval-tower_of_hanoi-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name tower_of_hanoi_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/tower_of_hanoi"
+
+# TSUMEGO - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-tsumego-llama-direct.out --job-name eval-tsumego-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name tsumego_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/tsumego"
+
+# TSUMEGO - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-tsumego-llama-grpo.out --job-name eval-tsumego-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name tsumego_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/tsumego"
+
+# WORD_LADDER - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-word_ladder-llama-direct.out --job-name eval-word_ladder-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name word_ladder_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/word_ladder"
+
+# WORD_LADDER - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-word_ladder-llama-grpo.out --job-name eval-word_ladder-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name word_ladder_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/word_ladder"
+
+# WORD_SEQUENCE_REVERSAL - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-word_sequence_reversal-llama-direct.out --job-name eval-word_sequence_reversal-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name word_sequence_reversal_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/word_sequence_reversal"
+
+# WORD_SEQUENCE_REVERSAL - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-word_sequence_reversal-llama-grpo.out --job-name eval-word_sequence_reversal-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name word_sequence_reversal_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/word_sequence_reversal"
+
+# WORD_SORTING - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-word_sorting-llama-direct.out --job-name eval-word_sorting-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name word_sorting_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/word_sorting"
+
+# WORD_SORTING - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-word_sorting-llama-grpo.out --job-name eval-word_sorting-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name word_sorting_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/word_sorting"
+
+# ZEBRA_PUZZLES - DIRECT (wo thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-zebra_puzzles-llama-direct.out --job-name eval-zebra_puzzles-llama-direct "python evaluate/run_teacher_evaluation.py \
+--config-name zebra_puzzles_direct.yaml evaluation.checkpoint_dir=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/direct_llama/zebra_puzzles"
+
+# ZEBRA_PUZZLES - GRPO (w thinking) LLAMA EVALUATION
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-zebra_puzzles-llama-grpo.out --job-name eval-zebra_puzzles-llama-grpo "python evaluate/run_teacher_evaluation.py \
+--config-name zebra_puzzles_grpo.yaml \
+evaluation.checkpoint_dir=/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo_meta-llama-3.2-3B-Instruct/ \
+evaluation.base_model_path=/nlp/scr/qinanyu/models/meta-llama-3.2-3B-Instruct evaluation.output_dir=evaluate/results/grpo_llama/zebra_puzzles"
+

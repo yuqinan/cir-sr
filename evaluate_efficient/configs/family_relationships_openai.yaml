@@ -1,0 +1,82 @@
+# Teacher-Student Evaluation Configuration with OpenAI API Teacher
+# Uses GPT-4o-mini as teacher model for generating explanations
+
+evaluation:
+  # Evaluation metrics to compute
+  metrics:
+    - "teacher_accuracy"
+    #- "entropy"  # Student accuracy using teacher explanations        # Teacher generation entropy
+  
+  # Use OpenAI API instead of checkpoints for teacher model
+  #checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/direct/family_relationships"  # Not used for OpenAI API
+  base_model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"  # Not used for OpenAI API
+  
+  # Dataset configuration
+  teacher_dataset:
+    task_name: family_relationships
+    seed: 42
+    size: 21000
+    val_start: 20000  # Starting index for validation data
+    min_family_size: 4
+    max_family_size: 8
+
+  student_dataset:
+    task_name: family_relationships
+    seed: 44
+    size: 1000
+    min_family_size: 4
+    max_family_size: 8
+    val_start: 9000
+  
+  # Few-shot configuration
+  few_shot:
+    enabled: False
+    n_shot: 3
+    seed: 144  # Seed for few-shot examples
+  
+  # Model configuration - Teacher uses OpenAI API
+  teacher_model:
+    # OpenAI API configuration
+    use_openai_api: True
+    openai_model_name: "gpt-4o-2024-11-20"
+
+    # Generation parameters
+    temperature: 1.0
+    top_p: 1.0
+    top_k: -1  # Not used for OpenAI
+    max_tokens: 2048
+    use_chat_template: False
+    # Prompt configuration
+    developer_prompt: "default"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    preappend_token: ""  # Will be added to response for parsing
+    
+  student_model:
+    model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"  # Base model as student
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: True  # Enable chat template for student model
+    developer_prompt: "direct"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    preappend_token: "<answer>"
+  
+  # vLLM configuration - only used for student model
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: True
+    disable_log_stats: True
+    dtype: "bfloat16"
+    
+  # Evaluation settings
+  batch_size: 100  # Let smart batch sizing determine optimal size
+  max_checkpoints: 1  # Single "checkpoint" for OpenAI API
+  start_step: -1  # Not applicable for OpenAI API
+  
+  # Output configuration
+  output_dir: "evaluate/results/${evaluation.teacher_model.openai_model_name}_${evaluation.student_model.model_path}/family_relationships"
+  save_intermediate_results: True
+  plot_results: True

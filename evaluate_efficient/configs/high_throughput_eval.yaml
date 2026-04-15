@@ -1,0 +1,95 @@
+# High Throughput Student Accuracy Evaluation Configuration
+# Optimized for multi-GPU setups with maximum throughput
+
+evaluation:
+  # Evaluation type
+  metric_type: "student_accuracy"
+  
+  # Checkpoint configuration
+  checkpoint_dir: "checkpoints/gemma-3-12b/spiral_matrix_fsdp"
+  base_model_path: "google/gemma-3-12b-it"
+  
+  # Dataset configuration - larger for better GPU utilization
+  teacher_dataset:
+    task_name: "spiral_matrix"
+    seed: 42
+    size: 1000  # Larger dataset for better throughput measurement
+    # Task-specific parameters
+    min_n: 2
+    max_n: 10
+  
+  student_dataset:
+    task_name: "spiral_matrix"
+    seed: 44
+    size: 1000  # Larger dataset
+    # Task-specific parameters
+    min_n: 2
+    max_n: 10
+  
+  # Few-shot configuration
+  few_shot:
+    enabled: true
+    n_shot: 3
+    seed: 144
+  
+  # Model configuration optimized for throughput
+  teacher_model:
+    temperature: 1.0
+    top_p: 0.9
+    top_k: 50
+    max_tokens: 512  # Shorter for faster generation
+    
+  student_model:
+    model_path: "google/gemma-3-12b-it"
+    temperature: 0.7
+    top_p: 0.9
+    top_k: 50
+    max_tokens: 256  # Shorter for faster generation
+  
+  # Multi-GPU vLLM configuration for maximum throughput
+  vllm:
+    tensor_parallel_size: 8  # Use 8 GPUs if available
+    gpu_memory_utilization: 0.9  # High memory utilization
+    max_model_len: 2048
+    dtype: "bfloat16"
+    enforce_eager: true
+    disable_log_stats: true
+    
+    # High-throughput optimizations
+    enable_chunked_prefill: true
+    max_num_batched_tokens: 32768  # Large batch token limit
+    max_num_seqs: 512             # Many sequences in parallel
+    
+    # Additional performance optimizations
+    swap_space: 4                 # GB of swap space for larger batches
+    disable_sliding_window: true  # Disable for better throughput
+    
+  # Evaluation settings optimized for high throughput
+  batch_size: 64  # Will be auto-optimized based on GPU capabilities
+  max_checkpoints: 5  # Fewer checkpoints for faster iteration
+  auto_optimize_batch_size: true  # Enable automatic batch size optimization
+  
+  # Parallel processing settings
+  parallel_processing:
+    enabled: true
+    num_workers: 4  # More parallel workers
+    async_generation: true
+    prefetch_batches: 2  # Prefetch for better pipeline utilization
+    
+  # Memory optimization
+  memory_optimization:
+    enabled: true
+    cleanup_frequency: 8  # Clean up every 8 batches
+    force_gc: true        # Force garbage collection
+    
+  # Output configuration
+  output_dir: "evaluate/results/high_throughput"
+  save_intermediate_results: false  # Skip to save time
+  plot_results: true
+
+# Performance monitoring
+performance:
+  log_gpu_stats: true
+  log_batch_times: true
+  log_memory_usage: true
+  save_performance_metrics: true

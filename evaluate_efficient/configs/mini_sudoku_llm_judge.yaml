@@ -1,0 +1,89 @@
+# LLM Judge Evaluation Configuration for Mini Sudoku
+# Evaluates teacher thinking traces using ChatGPT and Claude Sonnet judges
+
+evaluation:
+  # Evaluation metrics to compute (only for loading teacher responses)
+  metrics:
+    - "llm_judge"  # Enable LLM judging
+  
+  # Use base model directly instead of checkpoint (for dummy pipeline)
+  checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/drgrpo/mini_sudoku-sudoku"
+  base_model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"
+  
+  # Dataset configuration (for reference, not used in judging)
+  teacher_dataset:
+    task_name: "mini_sudoku"
+    seed: 42
+    size: 1000
+    min_empty: 6
+    max_empty: 10
+  
+  student_dataset:
+    task_name: "mini_sudoku"
+    seed: 44  # Different seed for student evaluation
+    size: 1000
+    min_empty: 6
+    max_empty: 10
+  
+  # Few-shot configuration (not used for judging)
+  few_shot:
+    enabled: false
+    n_shot: 3
+    seed: 144  # Seed for few-shot examples
+  
+  # Model configuration (minimal, not used for judging)
+  teacher_model:
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 1024
+    use_chat_template: True
+    developer_prompt: "DeepSeekZero"
+    developer_role: "system"
+    preappend_token: "<think>"
+    
+  student_model:
+    model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"  # Base model as student
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: true  # Enable chat template for student model
+    developer_prompt: "empty"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    
+  # vLLM configuration (minimal, may not be used)
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: true
+    disable_log_stats: true
+    dtype: "bfloat16"
+    
+  # Evaluation settings
+  batch_size: 100
+  max_checkpoints: 10
+  start_step: -1  # Start from which step: -1 = all checkpoints, 100 = start from step 100
+  
+  # Output configuration - must match where teacher responses are saved
+  output_dir: "evaluate/results/drgrpo/mini_sudoku"
+  save_intermediate_results: true
+  plot_results: false  # Disable plotting for judge evaluation
+
+# LLM Judge specific configuration
+llm_judge:
+  # Which judges to use
+  use_chatgpt: true      # Requires OPENAI_API_KEY environment variable
+  use_claude: true       # Requires ANTHROPIC_API_KEY environment variable
+  
+  # Processing configuration
+  batch_size: 5          # Number of responses to judge in parallel (per judge)
+  
+  # Judge model configuration (optional, uses defaults if not specified)
+  chatgpt_model: "gpt-4o-mini"              # OpenAI model for judging
+  claude_model: "claude-3-5-sonnet-20241022"  # Anthropic model for judging
+  
+  # Rate limiting (optional)
+  chatgpt_requests_per_minute: 100
+  claude_requests_per_minute: 50

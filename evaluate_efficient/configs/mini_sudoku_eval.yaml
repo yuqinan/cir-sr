@@ -1,0 +1,76 @@
+# Mini Sudoku Student Accuracy Evaluation Configuration
+
+evaluation:
+  # Evaluation type
+  metric_type: "student_accuracy"
+  
+  # Checkpoint configuration
+  checkpoint_dir: "checkpoints/gemma-3-12b/mini_sudoku_fsdp"
+  base_model_path: "google/gemma-3-12b-it"
+  
+  # Dataset configuration
+  teacher_dataset:
+    task_name: "mini_sudoku"
+    seed: 42
+    size: 300
+    # Task-specific parameters
+    min_empty: 8
+    max_empty: 12
+  
+  student_dataset:
+    task_name: "mini_sudoku"
+    seed: 44
+    size: 300
+    # Task-specific parameters
+    min_empty: 8
+    max_empty: 12
+  
+  # Few-shot configuration
+  few_shot:
+    enabled: true
+    n_shot: 5
+    seed: 144
+  
+  # Model configuration
+  teacher_model:
+    temperature: 1.0
+    top_p: 0.9
+    top_k: 50
+    max_tokens: 2048
+    k: 1  # Number of responses to generate per question (for pass@k metrics)
+    
+  student_model:
+    model_path: "google/gemma-3-12b-it"
+    temperature: 0.1  # Lower temperature for more consistent answers
+    top_p: 0.9
+    top_k: 50
+    max_tokens: 1024
+    k: 1  # Number of responses to generate per question (for pass@k metrics)
+  
+  # vLLM configuration for multi-GPU throughput
+  vllm:
+    tensor_parallel_size: 4  # Use 4 GPUs for better throughput
+    gpu_memory_utilization: 0.85
+    max_model_len: 4096
+    dtype: "bfloat16"
+    enforce_eager: true
+    disable_log_stats: true
+    enable_chunked_prefill: true
+    max_num_batched_tokens: 16384  # Larger for sudoku
+    max_num_seqs: 128
+    
+  # Evaluation settings optimized for multi-GPU
+  batch_size: 16  # Will be auto-optimized based on GPU capabilities
+  max_checkpoints: 15
+  auto_optimize_batch_size: true  # Enable automatic batch size optimization
+  
+  # Parallel processing settings
+  parallel_processing:
+    enabled: true
+    num_workers: 2
+    async_generation: true
+  
+  # Output configuration
+  output_dir: "evaluate/results"
+  save_intermediate_results: true
+  plot_results: true

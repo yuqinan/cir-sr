@@ -1,0 +1,72 @@
+# Teacher-Student Few-Shot Evaluation Configuration for Mini Sudoku
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  # Evaluation metrics to compute
+  metrics:
+    - "student_accuracy"
+    #- "entropy"  # Student accuracy using teacher explanations        # Teacher generation entropy
+  
+  # Checkpoint configuration
+  checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo/mini_sudoku-sudoku"
+  base_model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"
+  
+  # Dataset configuration
+  teacher_dataset:
+    task_name: "sudoku"
+    seed: 42
+    size: 1000
+    min_empty: 30
+    max_empty: 50
+  
+  student_dataset:
+    task_name: "sudoku"
+    seed: 44  # Different seed for student evaluation
+    size: 1000
+    min_empty: 30
+    max_empty: 50
+  
+  # Few-shot configuration
+  few_shot:
+    enabled: true
+    n_shot: 3
+    seed: 144  # Seed for few-shot examples
+  
+  # Model configuration
+  teacher_model:
+    # Will be loaded from checkpoint
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 1024
+    use_chat_template: true  # Enable chat template for teacher model
+    developer_prompt: "DeepSeekZero"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    
+  student_model:
+    model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"  # Base model as student
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: true  # Enable chat template for student model
+    developer_prompt: "student_model"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+  
+  # vLLM configuration - minimal config to avoid hanging
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: true
+    disable_log_stats: true
+    dtype: "bfloat16"
+    
+  # Evaluation settings
+  batch_size: 100
+  max_checkpoints: 10  # Only one checkpoint specified
+  
+  # Output configuration
+  output_dir: "evaluate/results/sudoku"
+  save_intermediate_results: true
+  plot_results: true

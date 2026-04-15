@@ -1,11 +1,6 @@
 # Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning
-
-This is the official repository for the paper:
-
 **Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning**
 Qinan Yu, Alexa Tartaglini, Peter Hase, Carlos Guestrin, Christopher Potts
-
-[[Paper]](https://arxiv.org/abs/XXXX.XXXXX)
 
 ## Overview
 
@@ -60,21 +55,3 @@ pip install -r requirements.txt
 
 Code and detailed instructions coming soon.
 
-## Citation
-
-```bibtex
-@article{yu2026outcome,
-  title={Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning},
-  author={Yu, Qinan and Tartaglini, Alexa and Hase, Peter and Guestrin, Carlos and Potts, Christopher},
-  journal={Preprint},
-  year={2026}
-}
-```
-
-## Acknowledgments
-
-We thank Niloofar Mireshghallah for helpful discussion and feedback in the early stages of this project. This research is supported in part by grants from Google and Open Philanthropy (Coefficient Giving).
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

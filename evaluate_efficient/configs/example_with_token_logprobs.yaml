@@ -1,0 +1,49 @@
+# Example configuration showing how to save token-level log probabilities
+# This configuration enables detailed token analysis alongside perplexity calculation
+
+evaluation:
+  # Evaluation metrics to compute
+  metrics:
+    - "teacher_accuracy"
+    - "perplexity"  # This will calculate perplexity from logprobs
+  
+  # Use checkpoint path
+  checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo/family_relationships"
+  base_model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"
+  
+  # Dataset configuration
+  teacher_dataset:
+    task_name: "family_relationships"
+    seed: 42
+    size: 100  # Small size for testing token logprob saving
+  
+  # Model configuration with token logprob saving enabled
+  teacher_model:
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 1024
+    use_chat_template: True
+    developer_prompt: "DeepSeekZero"
+    developer_role: "system"
+    preappend_token: "<think>"
+    save_token_logprobs: true  # ENABLE TOKEN-LEVEL LOG PROBABILITY SAVING
+  
+  # vLLM configuration
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: true
+    disable_log_stats: true
+    dtype: "bfloat16"
+    
+  # Evaluation settings
+  batch_size: 50
+  max_checkpoints: 3  # Test with fewer checkpoints
+  start_step: -1
+  
+  # Output configuration
+  output_dir: "evaluate/results/token_logprobs_test"
+  save_intermediate_results: true
+  plot_results: true

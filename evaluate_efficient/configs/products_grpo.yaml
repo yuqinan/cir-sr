@@ -1,0 +1,60 @@
+# Teacher-Student Few-Shot Evaluation Configuration for Products
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  metrics:
+  - student_accuracy
+  #checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/grpo/products-easy-hard"  # Point to HuggingFace model
+  checkpoint_dir: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+  base_model_path: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+  teacher_dataset:
+    task_name: products
+    seed: 43
+    size: 1000
+    min_terms: 2
+    max_terms: 2
+    min_digits: 1
+    max_digits: 5
+  student_dataset:
+    task_name: products
+    seed: 44
+    size: 1000
+    min_terms: 2
+    max_terms: 2
+    min_digits: 1
+    max_digits: 5
+  few_shot:
+    enabled: true
+    n_shot: 3
+    seed: 144
+  teacher_model:
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 1024
+    use_chat_template: true
+    developer_prompt: DeepSeekZero
+    developer_role: system
+    preappend_token: <think>
+  student_model:
+    model_path: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: true
+    developer_prompt: empty
+    developer_role: system
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: true
+    disable_log_stats: true
+    dtype: bfloat16
+  batch_size: 100
+  max_checkpoints: 20
+  start_step: -1
+  output_dir: evaluate/results/grpo/products_default
+  save_intermediate_results: true
+  plot_results: true

@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.egg-info/
+.env
+wandb/
+
+# Large data files
+*.json
+*.jsonl

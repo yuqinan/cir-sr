@@ -1,0 +1,70 @@
+# Teacher-Student Few-Shot Evaluation Configuration for Mini Sudoku
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  # Evaluation metrics to compute
+  metrics:
+    - "student_accuracy"  # Student accuracy using teacher explanations
+    - "entropy"           # Teacher generation entropy
+  
+  # Checkpoint configuration
+  checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/individual_qwen-2.5-3b-instruct-temp1/mini_sudoku/global_step_62"
+  base_model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"
+  
+  # Dataset configuration
+  teacher_dataset:
+    task_name: "mini_sudoku"
+    seed: 42
+    size: 100
+  
+  student_dataset:
+    task_name: "mini_sudoku"
+    seed: 44  # Different seed for student evaluation
+    size: 100
+  
+  # Few-shot configuration
+  few_shot:
+    enabled: true
+    n_shot: 3
+    seed: 144  # Seed for few-shot examples
+  
+  # Model configuration
+  teacher_model:
+    # Will be loaded from checkpoint
+    temperature: 1.0
+    top_p: 0.9
+    top_k: 50
+    max_tokens: 1024
+    use_chat_template: true  # Enable chat template for teacher model
+    developer_prompt: "DeepSeekZero"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    
+  student_model:
+    model_path: "/nlp/scr/qinanyu/models/qwen2.5-3b-instruct"  # Base model as student
+    temperature: 0.7
+    top_p: 0.9
+    top_k: 50
+    max_tokens: 512
+    use_chat_template: true  # Enable chat template for student model
+    developer_prompt: "student_model"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+  
+  # vLLM configuration - reduced memory utilization to prevent OOM
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.3  # Extremely reduced to 0.3 to prevent OOM
+    max_model_len: 512  # Reduced from 1024 to 512
+    dtype: "float16"
+    enforce_eager: true
+    disable_log_stats: true
+    
+  # Evaluation settings
+  batch_size: 8
+  max_checkpoints: 1  # Only one checkpoint specified
+  
+  # Output configuration
+  output_dir: "evaluate/results"
+  # Optional: Custom output path for results (overrides output_dir if provided)
+  # results_output_path: "/custom/path/to/results"
+  save_intermediate_results: true
+  plot_results: true

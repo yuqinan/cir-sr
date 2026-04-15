@@ -1,0 +1,83 @@
+# Teacher-Student Few-Shot Evaluation Configuration for Rush Hour
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  # Evaluation metrics to compute
+  metrics:
+    - "perplexity"
+    - "filler"  # Usefulness
+    - "shuffle"  # Usefulness
+    - "answer_removed_explanation_only"  # Informativeness
+  
+  # Use base model directly instead of checkpoint
+  checkpoint_dir: /nlp/scr/qinanyu/rl-explanations/checkpoints/think/rush_hour
+  base_model_path: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+  
+  # Dataset configuration
+  teacher_dataset:
+    task_name: rush_hour
+    seed: 42
+    size: 21000
+    val_start: 20000
+    min_moves: 1
+    max_moves: 50
+  
+  student_dataset:
+    task_name: rush_hour
+    seed: 44  # Different seed for student evaluation
+    size: 21000
+    val_start: 20000
+    min_moves: 1
+    max_moves: 50
+  
+  # Few-shot configuration
+  few_shot:
+    enabled: False
+    n_shot: 3
+    seed: 144  # Seed for few-shot examples
+  
+  teacher_model:
+    # OpenAI API configuration
+    use_openai_api: True
+    openai_model_name: "o3-mini"
+
+    # Generation parameters
+    temperature: 1.0
+    top_p: 1.0
+    top_k: -1  # Not used for OpenAI
+    max_tokens: 2048
+    use_chat_template: False
+    # Prompt configuration
+    developer_prompt: "default"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    preappend_token: ""  # Will be added to response for parsing
+    
+  student_model:
+    model_path: "gpt-4o-2024-11-20"  # Base model as student
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: True  # Enable chat template for student model
+    developer_prompt: "direct"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    preappend_token: "<answer>"
+  
+  # vLLM configuration - minimal config to avoid hanging
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: True
+    disable_log_stats: True
+    dtype: bfloat16
+    
+  # Evaluation settings
+  batch_size: 100
+  max_checkpoints: 1  # Only one checkpoint specified
+  start_step: -1  # Start from which step: -1 = all checkpoints, 100 = start from step 100
+  
+  # Output configuration
+  output_dir: /nlp/scr/qinanyu/rl-explanations/evaluate/results/grpo/rush_hour
+  save_intermediate_results: True
+  plot_results: True

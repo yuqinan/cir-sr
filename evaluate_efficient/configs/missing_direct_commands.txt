@@ -1,0 +1,87 @@
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-acre_direct.out --job-name eval-acre_direct "python evaluate/run_teacher_only.py --config-name acre_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-advanced_geometry_direct.out --job-name eval-advanced_geometry_direct "python evaluate/run_teacher_only.py --config-name advanced_geometry_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-aiw_direct.out --job-name eval-aiw_direct "python evaluate/run_teacher_only.py --config-name aiw_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-arc_1d_direct.out --job-name eval-arc_1d_direct "python evaluate/run_teacher_only.py --config-name arc_1d_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-base_conversion_direct.out --job-name eval-base_conversion_direct "python evaluate/run_teacher_only.py --config-name base_conversion_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-basic_arithmetic_direct.out --job-name eval-basic_arithmetic_direct "python evaluate/run_teacher_only.py --config-name basic_arithmetic_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-bf_direct.out --job-name eval-bf_direct "python evaluate/run_teacher_only.py --config-name bf_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-binary_alternation_direct.out --job-name eval-binary_alternation_direct "python evaluate/run_teacher_only.py --config-name binary_alternation_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-bitwise_arithmetic_direct.out --job-name eval-bitwise_arithmetic_direct "python evaluate/run_teacher_only.py --config-name bitwise_arithmetic_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-caesar_cipher_direct.out --job-name eval-caesar_cipher_direct "python evaluate/run_teacher_only.py --config-name caesar_cipher_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-calendar_arithmetic_direct.out --job-name eval-calendar_arithmetic_direct "python evaluate/run_teacher_only.py --config-name calendar_arithmetic_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-chain_sum_direct.out --job-name eval-chain_sum_direct "python evaluate/run_teacher_only.py --config-name chain_sum_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-codeio_direct.out --job-name eval-codeio_direct "python evaluate/run_teacher_only.py --config-name codeio_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-color_cube_rotation_direct.out --job-name eval-color_cube_rotation_direct "python evaluate/run_teacher_only.py --config-name color_cube_rotation_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-complex_arithmetic_direct.out --job-name eval-complex_arithmetic_direct "python evaluate/run_teacher_only.py --config-name complex_arithmetic_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-count_bits_direct.out --job-name eval-count_bits_direct "python evaluate/run_teacher_only.py --config-name count_bits_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-count_primes_direct.out --job-name eval-count_primes_direct "python evaluate/run_teacher_only.py --config-name count_primes_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-countdown_direct.out --job-name eval-countdown_direct "python evaluate/run_teacher_only.py --config-name countdown_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-course_schedule_direct.out --job-name eval-course_schedule_direct "python evaluate/run_teacher_only.py --config-name course_schedule_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-cryptarithm_direct.out --job-name eval-cryptarithm_direct "python evaluate/run_teacher_only.py --config-name cryptarithm_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-decimal_arithmetic_direct.out --job-name eval-decimal_arithmetic_direct "python evaluate/run_teacher_only.py --config-name decimal_arithmetic_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-decimal_chain_sum_direct.out --job-name eval-decimal_chain_sum_direct "python evaluate/run_teacher_only.py --config-name decimal_chain_sum_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-dice_direct.out --job-name eval-dice_direct "python evaluate/run_teacher_only.py --config-name dice_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-emoji_mystery_direct.out --job-name eval-emoji_mystery_direct "python evaluate/run_teacher_only.py --config-name emoji_mystery_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-family_relationships_direct.out --job-name eval-family_relationships_direct "python evaluate/run_teacher_only.py --config-name family_relationships_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-figlet_font_direct.out --job-name eval-figlet_font_direct "python evaluate/run_teacher_only.py --config-name figlet_font_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-fraction_simplification_direct.out --job-name eval-fraction_simplification_direct "python evaluate/run_teacher_only.py --config-name fraction_simplification_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-futoshiki_direct.out --job-name eval-futoshiki_direct "python evaluate/run_teacher_only.py --config-name futoshiki_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-game_of_life_direct.out --job-name eval-game_of_life_direct "python evaluate/run_teacher_only.py --config-name game_of_life_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-game_of_life_halting_direct.out --job-name eval-game_of_life_halting_direct "python evaluate/run_teacher_only.py --config-name game_of_life_halting_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-gcd_direct.out --job-name eval-gcd_direct "python evaluate/run_teacher_only.py --config-name gcd_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-graph_color_direct.out --job-name eval-graph_color_direct "python evaluate/run_teacher_only.py --config-name graph_color_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-group_anagrams_direct.out --job-name eval-group_anagrams_direct "python evaluate/run_teacher_only.py --config-name group_anagrams_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-intermediate_integration_direct.out --job-name eval-intermediate_integration_direct "python evaluate/run_teacher_only.py --config-name intermediate_integration_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-isomorphic_strings_direct.out --job-name eval-isomorphic_strings_direct "python evaluate/run_teacher_only.py --config-name isomorphic_strings_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-jugs_direct.out --job-name eval-jugs_direct "python evaluate/run_teacher_only.py --config-name jugs_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-knight_swap_direct.out --job-name eval-knight_swap_direct "python evaluate/run_teacher_only.py --config-name knight_swap_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-maze_direct.out --job-name eval-maze_direct "python evaluate/run_teacher_only.py --config-name maze_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-modulo_grid_direct.out --job-name eval-modulo_grid_direct "python evaluate/run_teacher_only.py --config-name modulo_grid_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-n_queens_direct.out --job-name eval-n_queens_direct "python evaluate/run_teacher_only.py --config-name n_queens_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-propositional_logic_direct.out --job-name eval-propositional_logic_direct "python evaluate/run_teacher_only.py --config-name propositional_logic_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-rectangle_count_direct.out --job-name eval-rectangle_count_direct "python evaluate/run_teacher_only.py --config-name rectangle_count_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-syllogism_direct.out --job-name eval-syllogism_direct "python evaluate/run_teacher_only.py --config-name syllogism_direct.yaml"
+
+nlprun -q sphinx -x sphinx[1,2,3,4,5,6,7,8] -g 1 -c 1 --mem 80G -o /nlp/scr/qinanyu/rl-explanations/bash_output/eval-tower_of_hanoi_direct.out --job-name eval-tower_of_hanoi_direct "python evaluate/run_teacher_only.py --config-name tower_of_hanoi_direct.yaml"

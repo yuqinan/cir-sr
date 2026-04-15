@@ -1,0 +1,67 @@
+# Teacher-Student Few-Shot Evaluation Configuration for Futoshiki
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  metrics:
+    - "perplexity"
+    - "expert_thinking"  
+    - "truncate_random"
+    - "filler" 
+  checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/think/futoshiki"  # Point to HuggingFace model
+  #checkpoint_dir: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+  base_model_path: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+  teacher_dataset:
+    task_name: futoshiki
+    seed: 42
+    size: 21000
+    val_start: 20000  # Starting index for validation data
+    min_board_size: 4
+    max_board_size: 9
+    min_difficulty: 0
+    max_difficulty: 3
+  student_dataset:
+    task_name: futoshiki
+    seed: 44
+    size: 1000
+    val_start: 0
+    min_board_size: 4
+    max_board_size: 9
+    min_difficulty: 0
+    max_difficulty: 3
+  few_shot:
+    enabled: true
+    n_shot: 3
+    seed: 144
+  teacher_model:
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 1024
+    use_chat_template: true
+    developer_prompt: DeepSeekZero
+    developer_role: system
+    preappend_token: <think>
+    save_token_logprobs: true
+  student_model:
+    model_path: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: true
+    developer_prompt: empty
+    developer_role: system
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: true
+    disable_log_stats: true
+    dtype: bfloat16
+  batch_size: 100
+  max_checkpoints: 20
+  start_step: 30
+  output_dir: evaluate/results/grpo/futoshiki
+  save_intermediate_results: true
+  plot_results: true
+  expert_thinking_dir: /nlp/scr/qinanyu/rl-explanations/evaluate/results/openai/family_relationships/teacher/step_openai_api/teacher_responses_step_openai_api.json

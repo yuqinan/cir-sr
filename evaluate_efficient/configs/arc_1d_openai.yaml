@@ -1,0 +1,78 @@
+# Teacher-Student Few-Shot Evaluation Configuration for Arc 1D
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  metrics:
+    - "perplexity"
+    - "filler"  # Usefulness
+    - "shuffle"  # Usefulness
+    - "answer_removed_explanation_only"  # Informativeness
+  checkpoint_dir: /nlp/scr/qinanyu/rl-explanations/checkpoints/think/arc_1d
+  base_model_path: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+
+  teacher_dataset:
+    task_name: arc_1d
+    seed: 42
+    size: 21000
+    val_start: 20000
+    min_size: 10
+    max_size: 30
+  
+  student_dataset:
+    task_name: arc_1d
+    seed: 44
+    size: 21000
+    val_start: 20000
+    min_size: 10
+    max_size: 30
+  
+  few_shot:
+    enabled: False
+    n_shot: 3
+    seed: 144
+  
+  teacher_model:
+    # OpenAI API configuration
+    use_openai_api: True
+    openai_model_name: "o3-mini"
+
+    # Generation parameters
+    temperature: 1.0
+    top_p: 1.0
+    top_k: -1  # Not used for OpenAI
+    max_tokens: 2048
+    use_chat_template: False
+    # Prompt configuration
+    developer_prompt: "default"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    preappend_token: ""  # Will be added to response for parsing
+  
+  student_model:
+    model_path: "gpt-4o-2024-11-20"  # Base model as student
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: True  # Enable chat template for student model
+    developer_prompt: "direct"  # Key from data.template.SYSTEM_PROMPTS
+    developer_role: "system"
+    preappend_token: "<answer>"
+  
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: true
+    disable_log_stats: true
+    dtype: bfloat16
+  
+  batch_size: 100
+  max_checkpoints: 1
+  start_step: -1
+  
+  output_dir: evaluate/results/${evaluation.teacher_model.openai_model_name}_${evaluation.student_model.model_path}/arc_1d
+  save_intermediate_results: true
+  plot_results: true
+  expert_thinking_dir:
+      o3-mini: /nlp/scr/qinanyu/rl-explanations/evaluate/results/o3-mini_gpt-4.1-mini/${evaluation.teacher_dataset.task_name}/teacher/step_0/teacher_responses_step_0.json
+      gpt-oss: /nlp/scr/qinanyu/rl-explanations/evaluate/results/gpt-oss-20b_gpt-4.1-mini/${evaluation.teacher_dataset.task_name}/teacher/step_0/teacher_responses_step_0.json

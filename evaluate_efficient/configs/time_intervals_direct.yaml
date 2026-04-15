@@ -1,0 +1,59 @@
+# Teacher-Student Few-Shot Evaluation Configuration for Time Intervals
+# Tests teacher-student few-shot accuracy with specified parameters
+
+evaluation:
+  metrics:
+  - student_accuracy
+  #checkpoint_dir: "/nlp/scr/qinanyu/rl-explanations/checkpoints/direct/time_intervals"  # Point to HuggingFace model
+  checkpoint_dir: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+  base_model_path: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+  teacher_dataset:
+    task_name: time_intervals
+    seed: 43
+    size: 1000
+    val_start: 0
+    max_time_difference_seconds: 86400
+    max_date_difference_days: 100
+  student_dataset:
+    task_name: time_intervals
+    seed: 44
+    size: 1000
+    max_time_difference_seconds: 86400
+    max_date_difference_days: 100
+  few_shot:
+    enabled: true
+    n_shot: 3
+    seed: 144
+  teacher_model:
+    temperature: 1.0
+    k: 1
+    save_token_logprobs: false
+    top_p: 1
+    top_k: -1
+    max_tokens: 1024
+    use_chat_template: true
+    developer_prompt: direct
+    developer_role: system
+    preappend_token: <answer>
+  student_model:
+    model_path: /nlp/scr/qinanyu/models/qwen2.5-3b-instruct
+    temperature: 1.0
+    top_p: 1
+    top_k: -1
+    max_tokens: 512
+    use_chat_template: true
+    developer_prompt: empty
+    developer_role: system
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.4
+    max_model_len: 4096
+    enforce_eager: true
+    disable_log_stats: true
+    dtype: bfloat16
+  batch_size: 100
+  max_checkpoints: 20
+  start_step: -1
+  output_dir: evaluate/results/direct/time_intervals_default
+  save_intermediate_results: true
+  plot_results: true
